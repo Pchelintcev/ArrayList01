@@ -5,14 +5,13 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ArrayList<String> shoppingList = new ArrayList<>(); //колоекция "список покупок"
+        ArrayList<String> shoppingList = new ArrayList<>(); //коллекция "список покупок"
         String[] action = {"добавить в список", "показать список", "удалить из списка"};
         System.out.println("Вы составляете список для покупки в магазине,");
         System.out.println("перед вами список доступных операций:");
         for (int i = 0; i < action.length; i++) {
             System.out.println((i + 1) + "\t" + action[i]);
         }
-
 
         while (true) {
             System.out.println("выбери номер операции");
@@ -57,7 +56,6 @@ public class Main {
                     numShopping = Integer.parseInt(input3) - 1;
                     System.out.println("покупка " + shoppingList.get(numShopping) + " удалена, ваш список покупок:");
                     shoppingList.remove(numShopping);
-                    System.out.println(shoppingList); // новый список (за минусом удаленного товара)
                     String[] shopping2 = shoppingList.toArray(new String[0]);
                     for (int i = 0; i < shopping2.length; i++) {
                         System.out.println((i + 1) + "\t" + shopping2[i]);
